@@ -37,6 +37,10 @@
 * MVC was initially called Thing-Model-View-Editor and developed into Model, View, Controller, Editor and Tool but MVC was the short version
 
 #Definition of Terms
+* Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.
+* View - Capable of showing one or more pictorial representations of the Model. A View is also able to perform such operations upon the Model that is reasonabely associated with that View.
+* Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views
+* Editor - Establishes and positions a given set of Views on the screen, coordinates them and provides the user with a suitable command interface.
 
 #What ASP.NET MVC Has To Offer
 
