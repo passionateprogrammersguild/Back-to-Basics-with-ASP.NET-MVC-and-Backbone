@@ -5,6 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+   <style type="text/css">
+        label
+        {
+            font-weight:bold;
+        }
+        .event-title 
+        {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .speaker-engagement 
+        {
+            margin-bottom:5px;
+        }
+    </style>
 </head>
 <body>
    <!-- TODO Set the model up to signal the view when it changes -->

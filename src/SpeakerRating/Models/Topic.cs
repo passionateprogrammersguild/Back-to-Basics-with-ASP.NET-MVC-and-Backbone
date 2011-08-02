@@ -6,6 +6,8 @@ namespace SpeakerRating.Models
     {   
         [DisplayName("What:")]
         public string Title { get; set; }
+
+        [DisplayName("About:")]
         public string Abstract { get; set; }
     }
 }

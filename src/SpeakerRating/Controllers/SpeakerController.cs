@@ -9,9 +9,14 @@ namespace SpeakerRating.Controllers
         {
             _speakerService = speakerService;
         }
-        public ActionResult Index(int? id)
+        public ActionResult Speaker(int id)
         {
             return View(_speakerService.Find(id));
-        }        
+        }
+
+        public ActionResult Speakers()
+        {
+            return View(_speakerService.FindAll());
+        }
     }
 }

@@ -20,14 +20,26 @@ namespace SpeakerRating
 
             routes.MapRoute(
                "SpeakerRoute", // Route name
-               "{controller}/{id}", // URL with parameters
-               new { controller = "Speaker", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+               "{controller}.aspx/{id}", // URL with parameters
+               new { controller = "Speaker", action = "Speaker" } // Parameter defaults
+           );
+
+            routes.MapRoute(
+               "Speakers", // Route name
+               "{controller}.aspx", // URL with parameters
+               new { controller = "Speaker", action = "Speakers" } // Parameter defaults
            );
             
             routes.MapRoute(
                 "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Speaker", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                "{controller}.aspx/{action}/{id}", // URL with parameters
+                new { controller = "Speaker", action = "Speaker" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Home", // Route name
+                "", // URL with parameters
+                new { controller = "Speaker", action = "Speakers" } // Parameter defaults
             );
 
         }

@@ -94,11 +94,14 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Shared\DetailView.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SpeakingVenue.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Speaker.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SpeakerEngagement.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Topic.ascx" />
-    <Content Include="Views\Speaker\Index.aspx" />
+    <Content Include="Views\Shared\ListView.ascx" />
+    <Content Include="Views\Speaker\Speakers.aspx" />
+    <Content Include="Views\Speaker\Speaker.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -122,7 +125,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
