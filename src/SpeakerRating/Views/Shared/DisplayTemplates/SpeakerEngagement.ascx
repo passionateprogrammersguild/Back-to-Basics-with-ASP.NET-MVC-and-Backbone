@@ -1,14 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<SpeakerRating.Models.SpeakerEngagement>" %>
-<script runat="server">
- private static string ConvertToStars(int speakerRating)
-    {
-        // Could have also done this in a partial class to seperate out the code from the page but oh well
-        //TODO:  write code here to create seach of the stars where each star is indexed as id_star_index
-        // Based on the star rating will include colored stars based on that
-                
-        return string.Format("This event was rated at {0} star(s)", speakerRating);        
-    }
-</script>
+
 <div class = "speaker-engagement">
     <span class="event-title"><%=Html.DisplayFor(x => x.Topic.Title) %></span>
     <fieldset>
@@ -20,7 +11,12 @@
         <%=Html.LabelFor(x => x.DateTimeSpeaking)%>
         <%=Html.DisplayFor(x => x.DateTimeSpeaking)%><br />
          <%if(this.ViewContext.RouteData.Values["id"] != null) {%>
-            <label>Event Star Rating:</label> <%=ConvertToStars(Model.Rating) %>
+            <div style="float:left;">
+                <label>Event Star Rating:</label>
+            </div>
+            <div style="float:left;">
+                <%=Html.Stars(Model.Rating, new {name = "stars_" + Model.Speaker.Id + "_" + Model.EventId}) %>
+            </div>
         <%}%>
          
     </fieldset>

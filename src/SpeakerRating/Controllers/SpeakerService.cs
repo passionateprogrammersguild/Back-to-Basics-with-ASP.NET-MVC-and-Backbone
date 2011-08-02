@@ -50,6 +50,7 @@ namespace SpeakerRating.Controllers
         {
             Func<SpeakerEngagement> returnNextEngagementForBayer = () => new SpeakerEngagement()
                                                                              {
+                                                                                 EventId = 100,
                                                                                  Speaker = speaker,
                                                                                  Venue = new JaxDugVenue(),
                                                                                  DateTimeSpeaking = DateTime.Now.AddMonths(1),
@@ -62,6 +63,7 @@ namespace SpeakerRating.Controllers
 
             Func<SpeakerEngagement> returnNextEngagementForMichael = () => new SpeakerEngagement()
                                                                                {
+                                                                                   EventId = 101,
                                                                                    Speaker = speaker,
                                                                                    Venue = new JaxDugVenue(),
                                                                                    DateTimeSpeaking = DateTime.Now.AddMonths(1),
@@ -87,6 +89,7 @@ namespace SpeakerRating.Controllers
                                 {
                                     {new SpeakerEngagement()
                                          {
+                                             EventId = 1,
                                              Speaker = speaker,
                                              Venue = new ArchSIGVenue(),
                                              DateTimeSpeaking = new DateTime(2011, 2, 2, 18,0,0,0),
@@ -108,6 +111,7 @@ namespace SpeakerRating.Controllers
                                 {
                                     {new SpeakerEngagement()
                                          {
+                                             EventId = 2,
                                              Speaker = speaker,
                                              Venue = new ArchSIGVenue(),
                                              DateTimeSpeaking = new DateTime(2010, 1, 26, 18,0,0,0),
@@ -121,6 +125,7 @@ namespace SpeakerRating.Controllers
                                     },
                                     {new SpeakerEngagement()
                                          {
+                                             EventId = 3,
                                              Speaker = speaker,
                                              Venue = new ArchSIGVenue(),
                                              DateTimeSpeaking = new DateTime(2010, 4, 28, 18,0,0,0),

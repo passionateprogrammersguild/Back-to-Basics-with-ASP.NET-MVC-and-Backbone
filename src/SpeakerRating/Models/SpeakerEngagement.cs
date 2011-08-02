@@ -5,6 +5,7 @@ namespace SpeakerRating.Models
 {
     public class SpeakerEngagement
     {
+        public int EventId { get; set; }
         public int Rating { get; set; }
         public Speaker Speaker { get; set; }
         

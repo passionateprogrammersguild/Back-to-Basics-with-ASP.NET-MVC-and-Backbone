@@ -80,9 +80,10 @@ namespace System.Web.Mvc.Html
 
         public static MvcHtmlString Stars(this HtmlHelper htmlHelper, int ranking, object htmlAttributes)
         {
-            
+
+            var haveAttributes = htmlAttributes != null;
             var tags = new List<TagBuilder>();
-            var htmlAttributeType = htmlAttributes.GetType();
+            var htmlAttributeType = haveAttributes ? htmlAttributes.GetType() : null;
             const int numberOfStars = 5;
             var attributes = new Dictionary<string, object>()
                                  {
@@ -90,7 +91,7 @@ namespace System.Web.Mvc.Html
                                      {"class", "star"}                                    
                                  };
 
-            if (htmlAttributes != null)
+            if (haveAttributes)
             {
                 var kvp = htmlAttributeType.GetProperties()
                                            .Select(x=> new {Key= x.Name, Value = x.GetValue(htmlAttributes, null)})
@@ -102,7 +103,10 @@ namespace System.Web.Mvc.Html
             }
 
             //TODO: if do not have a name property passed in then add it to the attributes
-            var nameProp = htmlAttributeType.GetProperties().Where(x => x.Name == "name").FirstOrDefault();
+            var nameProp = haveAttributes
+                               ? htmlAttributeType.GetProperties().Where(x => x.Name == "name").FirstOrDefault()
+                               : null;
+
             if (nameProp == null)
             {
                 attributes.Add("name", "stars_ranking");
@@ -122,6 +126,11 @@ namespace System.Web.Mvc.Html
             var sb = new StringBuilder();
             tags.ForEach(x => sb.Append(x.ToString()));
             return MvcHtmlString.Create(sb.ToString());
+        }
+
+        public static MvcHtmlString Stars(this HtmlHelper htmlHelper, int ranking)
+        {
+            return Stars(htmlHelper, ranking, null);
         }
     }
 }
