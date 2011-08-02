@@ -92,6 +92,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Autofac.Configuration.dll" />
+    <Content Include="bin\Autofac.dll" />
+    <Content Include="bin\Autofac.Integration.Web.dll" />
+    <Content Include="bin\Autofac.Integration.Web.Mvc.dll" />
+    <Content Include="bin\Autofac.xml" />
+    <Content Include="bin\SpeakerRating.dll" />
+    <Content Include="bin\SpeakerRating.pdb" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\Shared\DetailView.ascx" />
