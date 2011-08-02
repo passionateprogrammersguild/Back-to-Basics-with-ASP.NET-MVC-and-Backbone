@@ -3,13 +3,13 @@
 
 <div id="images" style="width:80%; margin:auto;">
    <div style="float:left">
-      <img src="../MVC.png"/>
+      <img src="MVC.png"/>
    </div>
    <div style="margin-top:80px; float:left">
-      <img src="../arrow.png"/>
+      <img src="arrow.png"/>
    </div>
    <div style="float:left">
-      <img src="../abc_blocks.jpg"/>
+      <img src="abc_blocks.jpg"/>
    </div>
 </div>
 <div style="position:absolute; bottom:0; left:20; width:100%;height:100px">
@@ -41,9 +41,20 @@
 * View - Capable of showing one or more pictorial representations of the Model. A View is also able to perform such operations upon the Model that is reasonabely associated with that View.
 * Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views
 * Editor - Establishes and positions a given set of Views on the screen, coordinates them and provides the user with a suitable command interface.
+* Tool  
+    * A higher level of abstraction that supports a user through his or her various tasks.  
+    * Plays the role of the Editor if there is only a single Editor; however if there are multiple editors the Tool will coordinate acitvities between the Editors.  
+    * Advantages can be realized through semi-automatic tool generation  
 
-#What ASP.NET MVC Has To Offer
-
+#The MVC in ASP.NET MVC
+* Model 
+    * View models have become king recently where the model is primarily a container for data
+    * Models do not communicate state changes to the View
+    * Models are provided by the controller to the View
+* View
+    * The View is divided into two parts namely the View Engine and the ViewPage/ViewPage<T>
+    * The View can be bound to a model but it is not required.
+    * The View can be composed of multiple views called Partials
 #DEMO
 
 #Supplimenting ASP.NET MVC with other Tools

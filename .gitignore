@@ -1,0 +1,11 @@
+*.pdf.html
+*.dll
+*.user
+*.suo
+bin/
+obj/
+_ReSharper*/
+packages/
+App_Data/
+presentation/mvc*.*
+presentation/s6
