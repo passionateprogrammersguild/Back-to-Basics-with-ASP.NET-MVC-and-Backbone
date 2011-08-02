@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Text;
 
 namespace System.Web.Mvc.Html
 {
@@ -8,7 +10,13 @@ namespace System.Web.Mvc.Html
         public static MvcHtmlString Anchor(this HtmlHelper htmlHelper, string linkText, object htmlAttributes)
         {
             Action<TagBuilder, PropertyInfo> addAttribute = (tb, p) => tb.MergeAttribute(p.Name,  p.GetValue(htmlAttributes, null).ToString());
-            Func<MvcHtmlString> returnEmpty = () => htmlHelper.Label(linkText);
+            Func<MvcHtmlString> returnEmpty = () =>
+                                                  {
+                                                      var tb = new TagBuilder("span");
+                                                      tb.SetInnerText(linkText);
+                                                      return MvcHtmlString.Create(tb.ToString());
+                                                  };
+
             Func<MvcHtmlString> returnAnchor = () =>
                                                    {
                                                        var tb = new TagBuilder("a");
@@ -68,6 +76,52 @@ namespace System.Web.Mvc.Html
             return srcIsEmpty(htmlAttributes)
                        ? returnAnchor(defaultImagePath)
                        : returnAnchor(srcProp.GetValue(htmlAttributes, null).ToString());
+        }
+
+        public static MvcHtmlString Stars(this HtmlHelper htmlHelper, int ranking, object htmlAttributes)
+        {
+            
+            var tags = new List<TagBuilder>();
+            var htmlAttributeType = htmlAttributes.GetType();
+            const int numberOfStars = 5;
+            var attributes = new Dictionary<string, object>()
+                                 {
+                                     {"type", "radio"},
+                                     {"class", "star"}                                    
+                                 };
+
+            if (htmlAttributes != null)
+            {
+                var kvp = htmlAttributeType.GetProperties()
+                                           .Select(x=> new {Key= x.Name, Value = x.GetValue(htmlAttributes, null)})
+                                           .ToList();
+                foreach(var item in kvp)
+                {
+                    attributes.Add(item.Key, item.Value);
+                }
+            }
+
+            //TODO: if do not have a name property passed in then add it to the attributes
+            var nameProp = htmlAttributeType.GetProperties().Where(x => x.Name == "name").FirstOrDefault();
+            if (nameProp == null)
+            {
+                attributes.Add("name", "stars_ranking");
+            }
+
+            for (var i = 0; i < numberOfStars; i++)
+            {
+                tags.Add(new TagBuilder("input"));
+                var thisTag = tags.Last();
+                thisTag.MergeAttributes(attributes);
+                if (i == ranking - 1)
+                {
+                    thisTag.MergeAttribute("checked", "checked");
+                }
+            }
+
+            var sb = new StringBuilder();
+            tags.ForEach(x => sb.Append(x.ToString()));
+            return MvcHtmlString.Create(sb.ToString());
         }
     }
 }

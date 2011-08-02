@@ -52,14 +52,35 @@
     * Models do not communicate state changes to the View
     * Models are provided by the controller to the View
 * View
-    * The View is divided into two parts namely the View Engine and the ViewPage/ViewPage<T>
+    * The View is divided into two parts namely the View Engine and the ViewPage
     * The View can be bound to a model but it is not required.
     * The View can be composed of multiple views called Partials
+    * Use of DisplayFor and EditorFor makes use of Partials to customize the view for the model
+* Controller
+    * Controller actions receives requests through the routing engine
+    * The DefaultModelBinder translates parameters of the request into the arguments of the action method
+    * You can write your own custom model binders
+    * Responsible for determining what happens next in terms of the ActionResult returned 
+
+#ASP.NET MVC / MVC pattern meld
+* How ASP.NET MVC Supports the Pattern
+    * Strongly typed views support the pattern since the model is tightly bound to the view
+    * PartialViews make views composible
+    * Html helpers assist in making views composable and reusable to a degree
+    * ModelBinding makes sense of the request which is the primary responsibility of the Controller
+    * Routing binds a user request to the users mental model of the domain
+* How ASP.NET MVC Does Not Support the Pattern
+    * The Controller does not have a reference to the view
+    * The View does not have a reference to the Controller instance
+    * The Model cannot inform the view of state changes
+
 #DEMO
 
 #Supplimenting ASP.NET MVC with other Tools
-
-#Other Tools that Are Out There
+* Due to the execution boundry between the client and the server you may need MVC on the client
+* [Knockout.js](http://http://knockoutjs.com/) is a javascript framework that implements MVVM on the client
+* [Backbone.js](http://documentcloud.github.com/backbone/) seems to be a MVC framework without the C 
+* [JavascriptMVC](http://www.javascriptmvc.com/) is what is says it is 
 
 #References
 * [Trygve Reenskaug's Home Page](http://heim.ifi.uio.no/~trygver/)

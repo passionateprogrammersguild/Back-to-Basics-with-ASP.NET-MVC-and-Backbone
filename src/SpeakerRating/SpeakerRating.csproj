@@ -101,6 +101,12 @@
     <Content Include="bin\SpeakerRating.pdb" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\lib\star-rating\delete.gif" />
+    <Content Include="Scripts\lib\star-rating\jquery.MetaData.js" />
+    <Content Include="Scripts\lib\star-rating\jquery.rating.css" />
+    <Content Include="Scripts\lib\star-rating\jquery.rating.js" />
+    <Content Include="Scripts\lib\star-rating\jquery.rating.pack.js" />
+    <Content Include="Scripts\lib\star-rating\star.gif" />
     <Content Include="Views\Shared\DetailView.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SpeakingVenue.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Speaker.ascx" />

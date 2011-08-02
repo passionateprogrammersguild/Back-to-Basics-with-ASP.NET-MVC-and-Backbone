@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+   <script type="text/javascript" src="/Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/lib/star-rating/jquery.MetaData.js"></script>
+    <script type="text/javascript" src="/Scripts/lib/star-rating/jquery.rating.js"></script>
     <style type="text/css">
         label
         {
@@ -19,7 +22,12 @@
         {
             margin-bottom:5px;
         }
+        .speaker 
+        {
+            clear:both;
+        }
     </style>
+    <link href="/Scripts/lib/star-rating/jquery.rating.css" type="text/css" rel="Stylesheet" />
 </head>
 <body>
      <%=Html.DisplayForModel() %>
