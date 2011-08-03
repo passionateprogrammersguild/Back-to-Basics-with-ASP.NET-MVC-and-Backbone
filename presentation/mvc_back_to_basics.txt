@@ -1,15 +1,15 @@
 #MVC 
 <center><h2>Back to Basics</h2></center>
 
-<div id="images" style="width:80%; margin:auto;">
+<div id="images" style="width:70%; margin:auto;">
    <div style="float:left">
-      <img src="../MVC.png"/>
+      <img src="MVC.png"/>
    </div>
    <div style="margin-top:80px; float:left">
-      <img src="../arrow.png"/>
+      <img src="arrow.png"/>
    </div>
    <div style="float:left">
-      <img src="../abc_blocks.jpg"/>
+      <img src="abc_blocks.jpg"/>
    </div>
 </div>
 <div style="position:absolute; bottom:0; left:20; width:100%;height:100px">
@@ -25,14 +25,23 @@
     </div>
 </div>
 
-#Before we Begin
-* How many people are familiar with the MVC pattern as it was defined back in 1978?
-* How many people work with ASP.NET MVC in your jobs
-* How many people are familiar with how ASP.NET mvc applies the MVC pattern
-* How many people are aware of where ASP.NET MVC falls short in terms of implementing the MVC pattern
-* How many people care about this subject at all :(
+#Why am I Doing this Presentation
+<div style="width:50%; margin:auto">
+   <img src="dilbert-buzzword.jpeg" title="All I heard were buzzwords like IOC, Testability, ModelBinders, Action Filters"/>
+</div>
+
+>When I started with ASP.NET MVC I heard buzzwords like testable, seperation of concerns, convention over configuration, and I appreciated and embraced those buzzwords, but I did not have a firm grasp of what the MVC pattern really was.
+
+#Questions?
+<div style="width:50%; margin:auto">
+   <img src="Questions.jpg" title="A couple of questions to understand the audience and their understanding of the material"/>
+</div>
 
 #Tools of the Trade
+<div style="width:50%; margin:auto">
+   <img src="tools_of_the_trade.gif" title="What technology tools will be represented in the presentation"/>
+</div>
+
 * ASP.NET MVC2
 * Web Forms View Engine
 * .NET 3.5
@@ -41,6 +50,8 @@
 * jquery.rating plugin
 
 #In the Beginning
+![Trygve M. Reenskaug](trygve.jpg "Hi my name is Trygve Reenskaug and I invented the MVC pattern in 1978 at Xerox PARC")
+
 * University of Oslo Professor Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978
 * Smalltalk included an implementation of MVC as a result of Trygve M. H. Reenskaug's work
 * Several whitepapers where written on the subject including
@@ -52,17 +63,17 @@
 * Naked objects was a design pattern established in 2004 by Richard Pawson that took MVC to the next level 
 
 #MVC Pattern Communication
-![MVC Communication](../MVCCommunication.png "MVC Communication")
+![MVC Communication](MVCCommunication.png "MVC Communication")
 
-#Definition of Terms
+#MVC Pattern Definition of Terms
 * Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.
 * View - Capable of showing one or more pictorial representations of the Model. 
 * Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted
 
 #ASP.NET MVC Communication
-![ASP.NET MVC Communication](../AspNetMVCCommunication.png "ASP.NET MVC Communication")
+![ASP.NET MVC Communication](AspNetMVCCommunication.png "ASP.NET MVC Communication")
 
-#The MVC in ASP.NET MVC
+#ASP.NET MVC Definition of Terms
 * Model 
     * View models have become king recently where the model is primarily a container for data
     * Models do not communicate state changes to the View
@@ -79,7 +90,7 @@
     * Responsible for determining what happens next in terms of the ActionResult returned 
 
 #But What About Javascript Heavy Apps
-![Javascript MVC Communication](../JavascriptMVCCommunication.png "Javascript MVC Communication")
+![Javascript MVC Communication](JavascriptMVCCommunication.png "Javascript MVC Communication")
 
 #Supplimenting ASP.NET MVC with other Tools
 * Due to the execution boundry between the client and the server you may need MVC on the client

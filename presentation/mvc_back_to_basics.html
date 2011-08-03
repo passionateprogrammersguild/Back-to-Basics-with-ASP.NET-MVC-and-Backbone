@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+   <title>Untitled Slide Show</title>
+
+<meta name="generator" content="- generator not found -">
+<meta name="author"    content="- author not found -" >
+
+<!-- S6 style sheet links -->
+<link rel="stylesheet" href="mvc_back_to_basics.css" media="projection" id="styleProjection">
+<link rel="stylesheet" href="s6/screen.css"         media="screen"     id="styleScreen">
+<link rel="stylesheet" href="s6/print.css"          media="print">
+
+<!-- S6 JS -->
+<script src="s6/jquery.js"></script>
+<script src="s6/jquery.slideshow.js"></script>
+<script>
+  $(document).ready( function() {
+    Slideshow.init();
+  } );
+
+  
+</script>
+
+<!-- Better Browser Banner for Microsoft Internet Explorer (IE) -->
+<!--[if IE]>
+<script src="s6/jquery.microsoft.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+
+<div class="layout"> 
+  <div id="header"></div>
+  <div id="footer">
+    <h1></h1>
+    <h2></h2>
+  </div>
+</div>
+
+<div class="presentation">
+   
+<div class='slide '>
+<h1 id="mvc">MVC</h1><center><h2>Back to Basics</h2></center>
+
+<div id="images" style="width:70%; margin:auto;">
+   <div style="float:left">
+      <img src="MVC.png" />
+   </div>
+   <div style="margin-top:80px; float:left">
+      <img src="arrow.png" />
+   </div>
+   <div style="float:left">
+      <img src="abc_blocks.jpg" />
+   </div>
+</div>
+<div style="position:absolute; bottom:0; left:20; width:100%;height:100px">
+    <div style="float:left;height:100%;width:50%;">
+        <span style="font-size:20px;">Michael Mann</span><br />
+        Sr. Software Engineer<br />
+        Red Rocket Solutions<br />
+    </div>
+    <div style="float:right;height:100%;width:50%;">
+    Email: <a href="mailto:mmann2943@gmail.com">mmann2943@gmail.com</a><br />
+    Blog: <a href="http://passionateprogrammersguild.com">http://passionateprogrammersguild.com</a><br />
+    GitHub: <a href="https://github.com/passionateprogrammersguild">https://github.com/passionateprogrammersguild</a>
+    </div>
+</div>
+
+
+</div>
+<div class='slide '>
+<h1 id="why-am-i-doing-this-presentation">Why am I Doing this Presentation</h1><div style="width:50%; margin:auto">
+   <img src="dilbert-buzzword.jpeg" title="All I heard were buzzwords like IOC, Testability, ModelBinders, Action Filters" />
+</div>
+
+<blockquote>
+  <p>When I started with ASP.NET MVC I heard buzzwords like testable, seperation of concerns, convention over configuration, and I appreciated and embraced those buzzwords, but I did not have a firm grasp of what the MVC pattern really was.</p>
+</blockquote>
+
+
+</div>
+<div class='slide '>
+<h1 id="questions">Questions?</h1><div style="width:50%; margin:auto">
+   <img src="Questions.jpg" title="A couple of questions to understand the audience and their understanding of the material" />
+</div>
+
+
+</div>
+<div class='slide '>
+<h1 id="tools-of-the-trade">Tools of the Trade</h1><div style="width:50%; margin:auto">
+   <img src="tools_of_the_trade.gif" title="What technology tools will be represented in the presentation" />
+</div>
+
+<ul>
+  <li>ASP.NET MVC2</li>
+  <li>Web Forms View Engine</li>
+  <li>.NET 3.5</li>
+  <li>AutoFac 2.4.5</li>
+  <li>jquery v1.4.1</li>
+  <li>jquery.rating plugin</li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="in-the-beginning">In the Beginning</h1><p><img src="trygve.jpg" alt="Trygve M. Reenskaug" title="Hi my name is Trygve Reenskaug and I invented the MVC pattern in 1978 at Xerox PARC" /></p>
+
+<ul>
+  <li>University of Oslo Professor Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978</li>
+  <li>Smalltalk included an implementation of MVC as a result of Trygve M. H. Reenskaug&rsquo;s work</li>
+  <li>Several whitepapers where written on the subject including
+    <ul>
+      <li>THING-MODEL-VIEW-EDITOR - An Example of a planning system</li>
+      <li>MODELS - VIEWS - CONTROLLERS</li>
+      <li>The Model-View-Controller (MVC). - Its Past and Present</li>
+      <li>Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)</li>
+    </ul>
+  </li>
+  <li>The intent of MVC was to capture a representation of the users mental model of the domain</li>
+  <li>Naked objects was a design pattern established in 2004 by Richard Pawson that took MVC to the next level </li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="mvc-pattern-communication">MVC Pattern Communication</h1><p><img src="MVCCommunication.png" alt="MVC Communication" title="MVC Communication" /></p>
+
+
+</div>
+<div class='slide '>
+<h1 id="mvc-pattern-definition-of-terms">MVC Pattern Definition of Terms</h1><ul>
+  <li>Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.</li>
+  <li>View - Capable of showing one or more pictorial representations of the Model. </li>
+  <li>Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted</li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="aspnet-mvc-communication">ASP.NET MVC Communication</h1><p><img src="AspNetMVCCommunication.png" alt="ASP.NET MVC Communication" title="ASP.NET MVC Communication" /></p>
+
+
+</div>
+<div class='slide '>
+<h1 id="aspnet-mvc-definition-of-terms">ASP.NET MVC Definition of Terms</h1><ul>
+  <li>Model 
+    <ul>
+      <li>View models have become king recently where the model is primarily a container for data</li>
+      <li>Models do not communicate state changes to the View</li>
+      <li>Models are provided by the controller to the View</li>
+    </ul>
+  </li>
+  <li>View
+    <ul>
+      <li>The View is divided into two parts namely the View Engine and the ViewPage</li>
+      <li>The View can be bound to a model but it is not required.</li>
+      <li>The View can be composed of multiple views called Partials</li>
+      <li>Use of DisplayFor and EditorFor makes use of Partials to customize the view for the model</li>
+    </ul>
+  </li>
+  <li>Controller
+    <ul>
+      <li>Controller actions receives requests through the routing engine</li>
+      <li>The DefaultModelBinder translates parameters of the request into the arguments of the action method</li>
+      <li>You can write your own custom model binders</li>
+      <li>Responsible for determining what happens next in terms of the ActionResult returned </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="but-what-about-javascript-heavy-apps">But What About Javascript Heavy Apps</h1><p><img src="JavascriptMVCCommunication.png" alt="Javascript MVC Communication" title="Javascript MVC Communication" /></p>
+
+
+</div>
+<div class='slide '>
+<h1 id="supplimenting-aspnet-mvc-with-other-tools">Supplimenting ASP.NET MVC with other Tools</h1><ul>
+  <li>Due to the execution boundry between the client and the server you may need MVC on the client</li>
+  <li><a href="http://http://knockoutjs.com/">Knockout.js</a> is a javascript framework that implements MVVM on the client</li>
+  <li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a> seems to be a MVC framework without the C </li>
+  <li><a href="http://www.javascriptmvc.com/">JavascriptMVC</a> is what is says it is </li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="demo">DEMO</h1></div>
+<div class='slide '>
+<h1 id="references">References</h1><ul>
+  <li><a href="http://heim.ifi.uio.no/~trygver/">Trygve Reenskaug&rsquo;s Home Page</a></li>
+  <li><a href="http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html">MVC White Papers</a></li>
+  <li><a href="http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)</a></li>
+  <li><a href="http://downloads.nakedobjects.net/resources/Pawson%20thesis.pdf">Naked Objects Thesis</a></li>
+  <li><a href="http://nakedobjects.org/introduction.html">Naked Objects Home Page</a></li>
+  <li><a href="https://github.com/passionateprogrammersguild/Back-to-Basics-with-ASP.NET-MVC">github accout for presentation</a></li>
+  <li><a href="http://passionateprogrammersguild.wordpress.com/">Passionate Programmers Guild</a></li>
+</ul>
+</div>
+
+
+</div><!-- presentation -->
+</body>
+</html>
