@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace SpeakerRating.Controllers
 {
@@ -17,6 +18,11 @@ namespace SpeakerRating.Controllers
         public ActionResult Speakers()
         {
             return View(_speakerService.FindAll());
+        }
+
+        public bool ShowingAllSpeakers()
+        {
+            return this.RouteData.Values["id"] == null;
         }
     }
 }

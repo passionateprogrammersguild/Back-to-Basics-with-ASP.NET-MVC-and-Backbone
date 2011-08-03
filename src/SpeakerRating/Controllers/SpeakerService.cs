@@ -53,7 +53,7 @@ namespace SpeakerRating.Controllers
                                                                                  EventId = 100,
                                                                                  Speaker = speaker,
                                                                                  Venue = new JaxDugVenue(),
-                                                                                 DateTimeSpeaking = DateTime.Now.AddMonths(1),
+                                                                                 DateTimeSpeaking = GetEventDateFrom(DateTime.Now.AddMonths(1)),
                                                                                  Topic = new Topic()
                                                                                              {
                                                                                                  Title = "BizTalk in the cloud",
@@ -66,7 +66,7 @@ namespace SpeakerRating.Controllers
                                                                                    EventId = 101,
                                                                                    Speaker = speaker,
                                                                                    Venue = new JaxDugVenue(),
-                                                                                   DateTimeSpeaking = DateTime.Now.AddMonths(1),
+                                                                                   DateTimeSpeaking = GetEventDateFrom(DateTime.Now.AddMonths(2)),
                                                                                    Topic = new Topic()
                                                                                                {
                                                                                                    Title = "Git WorkFlow with TFS",
@@ -79,6 +79,11 @@ namespace SpeakerRating.Controllers
             return speaker.Name.Contains("Bayer")
                        ? returnNextEngagementForBayer()
                        : returnNextEngagementForMichael();            
+        }
+
+        private static DateTime? GetEventDateFrom(DateTime date)
+        {
+            return new DateTime(date.Year, date.Month, date.Day, 18, 0,0,0);
         }
 
         public IEnumerable<SpeakerEngagement> PastSpeakingEngagementFor(Speaker speaker)

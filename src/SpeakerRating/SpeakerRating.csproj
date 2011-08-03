@@ -83,6 +83,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArchSIGVenue.cs" />
     <Compile Include="Models\JaxDugVenue.cs" />
     <Compile Include="Models\Speaker.cs" />
     <Compile Include="Models\SpeakerEngagement.cs" />
@@ -107,12 +108,12 @@
     <Content Include="Scripts\lib\star-rating\jquery.rating.js" />
     <Content Include="Scripts\lib\star-rating\jquery.rating.pack.js" />
     <Content Include="Scripts\lib\star-rating\star.gif" />
-    <Content Include="Views\Shared\DetailView.ascx" />
+    <Content Include="Views\Shared\PastSpeakingEvents.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SpeakingVenue.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Speaker.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SpeakerEngagement.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Topic.ascx" />
-    <Content Include="Views\Shared\ListView.ascx" />
+    <Content Include="Views\Shared\NextSpeakingEvent.ascx" />
     <Content Include="Views\Speaker\Speakers.aspx" />
     <Content Include="Views\Speaker\Speaker.aspx" />
     <Content Include="Web.config" />

@@ -87,8 +87,7 @@ namespace System.Web.Mvc.Html
             const int numberOfStars = 5;
             var attributes = new Dictionary<string, object>()
                                  {
-                                     {"type", "radio"},
-                                     {"class", "star"}                                    
+                                     {"type", "radio"}                                     
                                  };
 
             if (haveAttributes)
@@ -98,7 +97,10 @@ namespace System.Web.Mvc.Html
                                            .ToList();
                 foreach(var item in kvp)
                 {
-                    attributes.Add(item.Key, item.Value);
+                    if (!attributes.ContainsKey(item.Key))
+                    {
+                        attributes.Add(item.Key, item.Value);   
+                    }
                 }
             }
 
@@ -106,10 +108,17 @@ namespace System.Web.Mvc.Html
             var nameProp = haveAttributes
                                ? htmlAttributeType.GetProperties().Where(x => x.Name == "name").FirstOrDefault()
                                : null;
-
             if (nameProp == null)
             {
                 attributes.Add("name", "stars_ranking");
+            }
+
+            var classProp = haveAttributes
+                               ? htmlAttributeType.GetProperties().Where(x => x.Name == "class").FirstOrDefault()
+                               : null;
+
+            if (classProp == null) {
+                attributes.Add("class", "star");
             }
 
             for (var i = 0; i < numberOfStars; i++)

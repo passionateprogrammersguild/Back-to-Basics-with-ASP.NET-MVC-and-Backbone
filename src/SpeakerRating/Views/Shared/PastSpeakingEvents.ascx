@@ -2,4 +2,4 @@
  
 
     <h3>Past Speaking Event(s):</h3>
-      <%=Html.DisplayFor(x => x.PastSpeakingEngagements) %>   
+      <%=Html.DisplayFor(x => x.PastSpeakingEngagements) %>       

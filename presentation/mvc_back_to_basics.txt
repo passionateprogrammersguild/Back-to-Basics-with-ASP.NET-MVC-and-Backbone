@@ -19,14 +19,29 @@
         Red Rocket Solutions<br/>
     </div>
     <div style="float:right;height:100%;width:50%;">
-    Email: mmann2943@gmai.com<br/>
+    Email: <a href="mailto:mmann2943@gmail.com">mmann2943@gmail.com</a><br/>
     Blog: <a href="http://passionateprogrammersguild.com">http://passionateprogrammersguild.com</a><br/>
     GitHub: <a href="https://github.com/passionateprogrammersguild">https://github.com/passionateprogrammersguild</a>
     </div>
 </div>
 
+#Before we Begin
+* How many people are familiar with the MVC pattern as it was defined back in 1978?
+* How many people work with ASP.NET MVC in your jobs
+* How many people are familiar with how ASP.NET mvc applies the MVC pattern
+* How many people are aware of where ASP.NET MVC falls short in terms of implementing the MVC pattern
+* How many people care about this subject at all :(
+
+#Tools of the Trade
+* ASP.NET MVC2
+* Web Forms View Engine
+* .NET 3.5
+* AutoFac 2.4.5
+* jquery v1.4.1
+* jquery.rating plugin
+
 #In the Beginning
-* Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978
+* University of Oslo Professor Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978
 * Smalltalk included an implementation of MVC as a result of Trygve M. H. Reenskaug's work
 * Several whitepapers where written on the subject including
     * THING-MODEL-VIEW-EDITOR - An Example of a planning system
@@ -36,15 +51,13 @@
 * The intent of MVC was to capture a representation of the users mental model of the domain
 * MVC was initially called Thing-Model-View-Editor and developed into Model, View, Controller, Editor and Tool but MVC was the short version
 
+#A Pictures worth a thousand words
+![MVC Communication](MVCCommunication.png "MVC Communication")
+
 #Definition of Terms
 * Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.
-* View - Capable of showing one or more pictorial representations of the Model. A View is also able to perform such operations upon the Model that is reasonabely associated with that View.
-* Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views
-* Editor - Establishes and positions a given set of Views on the screen, coordinates them and provides the user with a suitable command interface.
-* Tool  
-    * A higher level of abstraction that supports a user through his or her various tasks.  
-    * Plays the role of the Editor if there is only a single Editor; however if there are multiple editors the Tool will coordinate acitvities between the Editors.  
-    * Advantages can be realized through semi-automatic tool generation  
+* View - Capable of showing one or more pictorial representations of the Model. 
+* Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted
 
 #The MVC in ASP.NET MVC
 * Model 
@@ -70,8 +83,8 @@
     * ModelBinding makes sense of the request which is the primary responsibility of the Controller
     * Routing binds a user request to the users mental model of the domain
 * How ASP.NET MVC Does Not Support the Pattern
-    * The Controller does not have a reference to the view
-    * The View does not have a reference to the Controller instance
+    * The user communicates with the View directly and not the Controller
+    * The Controller does not send messages to the Model for the model to change it state
     * The Model cannot inform the view of state changes
 
 #DEMO
@@ -85,6 +98,7 @@
 #References
 * [Trygve Reenskaug's Home Page](http://heim.ifi.uio.no/~trygver/)
 * [MVC White Papers](http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html)
+* [Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)](http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html)
 * [Naked Objects Home Page](http://nakedobjects.org/introduction.html)
 * [github accout for presentation](https://github.com/passionateprogrammersguild/Back-to-Basics-with-ASP.NET-MVC)
 * [Passionate Programmers Guild](http://passionateprogrammersguild.wordpress.com/)
