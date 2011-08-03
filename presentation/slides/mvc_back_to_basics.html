@@ -114,7 +114,7 @@
 
 </div>
 <div class='slide '>
-<h1 id="a-pictures-worth-a-thousand-words">A Pictures worth a thousand words</h1><p><img src="../MVCCommunication.png" alt="MVC Communication" title="MVC Communication" /></p>
+<h1 id="mvc-pattern-communication">MVC Pattern Communication</h1><p><img src="../MVCCommunication.png" alt="MVC Communication" title="MVC Communication" /></p>
 
 
 </div>
@@ -124,6 +124,11 @@
   <li>View - Capable of showing one or more pictorial representations of the Model. </li>
   <li>Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted</li>
 </ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="aspnet-mvc-communication">ASP.NET MVC Communication</h1><p><img src="../AspNetMVCCommunication.png" alt="ASP.NET MVC Communication" title="ASP.NET MVC Communication" /></p>
 
 
 </div>
@@ -157,29 +162,10 @@
 
 </div>
 <div class='slide '>
-<h1 id="aspnet-mvc--mvc-pattern-meld">ASP.NET MVC / MVC pattern meld</h1><ul>
-  <li>How ASP.NET MVC Supports the Pattern
-    <ul>
-      <li>Strongly typed views support the pattern since the model is tightly bound to the view</li>
-      <li>PartialViews make views composible</li>
-      <li>Html helpers assist in making views composable and reusable to a degree</li>
-      <li>ModelBinding makes sense of the request which is the primary responsibility of the Controller</li>
-      <li>Routing binds a user request to the users mental model of the domain</li>
-    </ul>
-  </li>
-  <li>How ASP.NET MVC Does Not Support the Pattern
-    <ul>
-      <li>The user communicates with the View directly and not the Controller</li>
-      <li>The Controller does not send messages to the Model for the model to change it state</li>
-      <li>The Model cannot inform the view of state changes</li>
-    </ul>
-  </li>
-</ul>
+<h1 id="but-what-about-javascript-heavy-apps">But What About Javascript Heavy Apps</h1><p><img src="../JavascriptMVCCommunication.png" alt="Javascript MVC Communication" title="Javascript MVC Communication" /></p>
 
 
 </div>
-<div class='slide '>
-<h1 id="demo">DEMO</h1></div>
 <div class='slide '>
 <h1 id="supplimenting-aspnet-mvc-with-other-tools">Supplimenting ASP.NET MVC with other Tools</h1><ul>
   <li>Due to the execution boundry between the client and the server you may need MVC on the client</li>
@@ -190,6 +176,8 @@
 
 
 </div>
+<div class='slide '>
+<h1 id="demo">DEMO</h1></div>
 <div class='slide '>
 <h1 id="references">References</h1><ul>
   <li><a href="http://heim.ifi.uio.no/~trygver/">Trygve Reenskaug&rsquo;s Home Page</a></li>

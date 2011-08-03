@@ -51,13 +51,16 @@
 * The intent of MVC was to capture a representation of the users mental model of the domain
 * Naked objects was a design pattern established in 2004 by Richard Pawson that took MVC to the next level 
 
-#A Pictures worth a thousand words
+#MVC Pattern Communication
 ![MVC Communication](../MVCCommunication.png "MVC Communication")
 
 #Definition of Terms
 * Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.
 * View - Capable of showing one or more pictorial representations of the Model. 
 * Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted
+
+#ASP.NET MVC Communication
+![ASP.NET MVC Communication](../AspNetMVCCommunication.png "ASP.NET MVC Communication")
 
 #The MVC in ASP.NET MVC
 * Model 
@@ -75,25 +78,16 @@
     * You can write your own custom model binders
     * Responsible for determining what happens next in terms of the ActionResult returned 
 
-#ASP.NET MVC / MVC pattern meld
-* How ASP.NET MVC Supports the Pattern
-    * Strongly typed views support the pattern since the model is tightly bound to the view
-    * PartialViews make views composible
-    * Html helpers assist in making views composable and reusable to a degree
-    * ModelBinding makes sense of the request which is the primary responsibility of the Controller
-    * Routing binds a user request to the users mental model of the domain
-* How ASP.NET MVC Does Not Support the Pattern
-    * The user communicates with the View directly and not the Controller
-    * The Controller does not send messages to the Model for the model to change it state
-    * The Model cannot inform the view of state changes
-
-#DEMO
+#But What About Javascript Heavy Apps
+![Javascript MVC Communication](../JavascriptMVCCommunication.png "Javascript MVC Communication")
 
 #Supplimenting ASP.NET MVC with other Tools
 * Due to the execution boundry between the client and the server you may need MVC on the client
 * [Knockout.js](http://http://knockoutjs.com/) is a javascript framework that implements MVVM on the client
 * [Backbone.js](http://documentcloud.github.com/backbone/) seems to be a MVC framework without the C 
 * [JavascriptMVC](http://www.javascriptmvc.com/) is what is says it is 
+
+#DEMO
 
 #References
 * [Trygve Reenskaug's Home Page](http://heim.ifi.uio.no/~trygver/)
