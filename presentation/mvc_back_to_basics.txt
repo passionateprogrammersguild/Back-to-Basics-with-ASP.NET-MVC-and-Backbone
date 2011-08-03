@@ -3,13 +3,13 @@
 
 <div id="images" style="width:80%; margin:auto;">
    <div style="float:left">
-      <img src="MVC.png"/>
+      <img src="../MVC.png"/>
    </div>
    <div style="margin-top:80px; float:left">
-      <img src="arrow.png"/>
+      <img src="../arrow.png"/>
    </div>
    <div style="float:left">
-      <img src="abc_blocks.jpg"/>
+      <img src="../abc_blocks.jpg"/>
    </div>
 </div>
 <div style="position:absolute; bottom:0; left:20; width:100%;height:100px">
@@ -49,10 +49,10 @@
     * The Model-View-Controller (MVC). - Its Past and Present
     * Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)
 * The intent of MVC was to capture a representation of the users mental model of the domain
-* MVC was initially called Thing-Model-View-Editor and developed into Model, View, Controller, Editor and Tool but MVC was the short version
+* Naked objects was a design pattern established in 2004 by Richard Pawson that took MVC to the next level 
 
 #A Pictures worth a thousand words
-![MVC Communication](MVCCommunication.png "MVC Communication")
+![MVC Communication](../MVCCommunication.png "MVC Communication")
 
 #Definition of Terms
 * Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.
@@ -99,6 +99,7 @@
 * [Trygve Reenskaug's Home Page](http://heim.ifi.uio.no/~trygver/)
 * [MVC White Papers](http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html)
 * [Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)](http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html)
+* [Naked Objects Thesis](http://downloads.nakedobjects.net/resources/Pawson%20thesis.pdf)
 * [Naked Objects Home Page](http://nakedobjects.org/introduction.html)
 * [github accout for presentation](https://github.com/passionateprogrammersguild/Back-to-Basics-with-ASP.NET-MVC)
 * [Passionate Programmers Guild](http://passionateprogrammersguild.wordpress.com/)

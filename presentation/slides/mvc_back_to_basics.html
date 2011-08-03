@@ -64,7 +64,7 @@
         Red Rocket Solutions<br />
     </div>
     <div style="float:right;height:100%;width:50%;">
-    Email: mmann2943@gmai.com<br />
+    Email: <a href="mailto:mmann2943@gmail.com">mmann2943@gmail.com</a><br />
     Blog: <a href="http://passionateprogrammersguild.com">http://passionateprogrammersguild.com</a><br />
     GitHub: <a href="https://github.com/passionateprogrammersguild">https://github.com/passionateprogrammersguild</a>
     </div>
@@ -73,9 +73,32 @@
 
 </div>
 <div class='slide '>
+<h1 id="before-we-begin">Before we Begin</h1><ul>
+  <li>How many people are familiar with the MVC pattern as it was defined back in 1978?</li>
+  <li>How many people work with ASP.NET MVC in your jobs</li>
+  <li>How many people are familiar with how ASP.NET mvc applies the MVC pattern</li>
+  <li>How many people are aware of where ASP.NET MVC falls short in terms of implementing the MVC pattern</li>
+  <li>How many people care about this subject at all :(</li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="tools-of-the-trade">Tools of the Trade</h1><ul>
+  <li>ASP.NET MVC2</li>
+  <li>Web Forms View Engine</li>
+  <li>.NET 3.5</li>
+  <li>AutoFac 2.4.5</li>
+  <li>jquery v1.4.1</li>
+  <li>jquery.rating plugin</li>
+</ul>
+
+
+</div>
+<div class='slide '>
 <h1 id="in-the-beginning">In the Beginning</h1><ul>
-  <li>Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978</li>
-  <li>Smalltalk included an implementation of MVC as a result of Trygve M. H. Reenskaug’s work</li>
+  <li>University of Oslo Professor Trygve M. H. Reenskaug documented the terms MVC while visiting the Smalltalk group at Xerox PARC in 1978</li>
+  <li>Smalltalk included an implementation of MVC as a result of Trygve M. H. Reenskaug&rsquo;s work</li>
   <li>Several whitepapers where written on the subject including
     <ul>
       <li>THING-MODEL-VIEW-EDITOR - An Example of a planning system</li>
@@ -85,33 +108,94 @@
     </ul>
   </li>
   <li>The intent of MVC was to capture a representation of the users mental model of the domain</li>
-  <li>MVC was initially called Thing-Model-View-Editor and developed into Model, View, Controller, Editor and Tool but MVC was the short version</li>
+  <li>Naked objects was a design pattern established in 2004 by Richard Pawson that took MVC to the next level </li>
 </ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="a-pictures-worth-a-thousand-words">A Pictures worth a thousand words</h1><p><img src="../MVCCommunication.png" alt="MVC Communication" title="MVC Communication" /></p>
 
 
 </div>
 <div class='slide '>
 <h1 id="definition-of-terms">Definition of Terms</h1><ul>
   <li>Model - Holds the user’s object model with its information and behaviour, reflecting the user’s mental model of the domain. Model is responsible for informing the view when its state changes.</li>
-  <li>View - Capable of showing one or more pictorial representations of the Model. A View is also able to perform such operations upon the Model that is reasonabely associated with that View.</li>
-  <li>Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views</li>
-  <li>Editor - Establishes and positions a given set of Views on the screen, coordinates them and provides the user with a suitable command interface.</li>
+  <li>View - Capable of showing one or more pictorial representations of the Model. </li>
+  <li>Controller - Receives user input, translates it into the appropriate messages and pass these messages on to one or more of the views or to the Model if a state change is warranted</li>
 </ul>
 
 
 </div>
 <div class='slide '>
-<h1 id="what-aspnet-mvc-has-to-offer">What ASP.NET MVC Has To Offer</h1></div>
+<h1 id="the-mvc-in-aspnet-mvc">The MVC in ASP.NET MVC</h1><ul>
+  <li>Model 
+    <ul>
+      <li>View models have become king recently where the model is primarily a container for data</li>
+      <li>Models do not communicate state changes to the View</li>
+      <li>Models are provided by the controller to the View</li>
+    </ul>
+  </li>
+  <li>View
+    <ul>
+      <li>The View is divided into two parts namely the View Engine and the ViewPage</li>
+      <li>The View can be bound to a model but it is not required.</li>
+      <li>The View can be composed of multiple views called Partials</li>
+      <li>Use of DisplayFor and EditorFor makes use of Partials to customize the view for the model</li>
+    </ul>
+  </li>
+  <li>Controller
+    <ul>
+      <li>Controller actions receives requests through the routing engine</li>
+      <li>The DefaultModelBinder translates parameters of the request into the arguments of the action method</li>
+      <li>You can write your own custom model binders</li>
+      <li>Responsible for determining what happens next in terms of the ActionResult returned </li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="aspnet-mvc--mvc-pattern-meld">ASP.NET MVC / MVC pattern meld</h1><ul>
+  <li>How ASP.NET MVC Supports the Pattern
+    <ul>
+      <li>Strongly typed views support the pattern since the model is tightly bound to the view</li>
+      <li>PartialViews make views composible</li>
+      <li>Html helpers assist in making views composable and reusable to a degree</li>
+      <li>ModelBinding makes sense of the request which is the primary responsibility of the Controller</li>
+      <li>Routing binds a user request to the users mental model of the domain</li>
+    </ul>
+  </li>
+  <li>How ASP.NET MVC Does Not Support the Pattern
+    <ul>
+      <li>The user communicates with the View directly and not the Controller</li>
+      <li>The Controller does not send messages to the Model for the model to change it state</li>
+      <li>The Model cannot inform the view of state changes</li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
 <div class='slide '>
 <h1 id="demo">DEMO</h1></div>
 <div class='slide '>
-<h1 id="supplimenting-aspnet-mvc-with-other-tools">Supplimenting ASP.NET MVC with other Tools</h1></div>
-<div class='slide '>
-<h1 id="other-tools-that-are-out-there">Other Tools that Are Out There</h1></div>
+<h1 id="supplimenting-aspnet-mvc-with-other-tools">Supplimenting ASP.NET MVC with other Tools</h1><ul>
+  <li>Due to the execution boundry between the client and the server you may need MVC on the client</li>
+  <li><a href="http://http://knockoutjs.com/">Knockout.js</a> is a javascript framework that implements MVVM on the client</li>
+  <li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a> seems to be a MVC framework without the C </li>
+  <li><a href="http://www.javascriptmvc.com/">JavascriptMVC</a> is what is says it is </li>
+</ul>
+
+
+</div>
 <div class='slide '>
 <h1 id="references">References</h1><ul>
-  <li><a href="http://heim.ifi.uio.no/~trygver/">Trygve Reenskaug’s Home Page</a></li>
+  <li><a href="http://heim.ifi.uio.no/~trygver/">Trygve Reenskaug&rsquo;s Home Page</a></li>
   <li><a href="http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html">MVC White Papers</a></li>
+  <li><a href="http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications Programming in Smalltalk-80(TM): How to use Model-View-Controller (MVC)</a></li>
+  <li><a href="http://downloads.nakedobjects.net/resources/Pawson%20thesis.pdf">Naked Objects Thesis</a></li>
   <li><a href="http://nakedobjects.org/introduction.html">Naked Objects Home Page</a></li>
   <li><a href="https://github.com/passionateprogrammersguild/Back-to-Basics-with-ASP.NET-MVC">github accout for presentation</a></li>
   <li><a href="http://passionateprogrammersguild.wordpress.com/">Passionate Programmers Guild</a></li>
